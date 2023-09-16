@@ -1,3 +1,4 @@
+"use client"
 import {BsFacebook} from "react-icons/bs"
 import {BsInstagram} from "react-icons/bs"
 import {BsYoutube} from "react-icons/bs"
