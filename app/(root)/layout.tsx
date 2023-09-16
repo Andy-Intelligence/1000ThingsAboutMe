@@ -1,4 +1,3 @@
-"use client"
 import NavBar from '@/components/sections/NavBar'
 import '../globals.css'
 import type { Metadata } from 'next'
