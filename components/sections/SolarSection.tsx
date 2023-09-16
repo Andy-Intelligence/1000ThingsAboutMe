@@ -1,3 +1,4 @@
+"use client"
 import ContentCard from "../cards/ContentCard"
 import TitleCounter from "../cards/TitleCounter"
 import Pexels from "@/public/assets/pexels.jpeg"
