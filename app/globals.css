@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@100;300;500&family=Public+Sans:ital,wght@1,900&family=Roboto+Condensed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@1,600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255; */
+}
+
+@media (prefers-color-scheme: dark) {
+  /* :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  } */
+}
+
+.parallax-container {
+  position: relative;
+  overflow: scroll;
+  /* height:100vh; */
+}
+
+.parallax-content {
+  position: relative;
+  z-index: 2; /* Ensure content is above the background */
+  /* Add your content styling here */
+}
+.parallax-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/spaceBg2.jpeg");
+  background-size: cover;
+  background-attachment: fixed;
+  transform: translateZ(0); /* Ensure hardware acceleration */
+}
+html{
+  /* background-color: green; */
+  height: 100%;
+  line-height: 1.5;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  color:#fff;
+  background-image: url("/assets/spaceBg2.jpeg");
+  background-size: cover;
+  background-position: center;
+  /* background-attachment: fixed; */
+}
+
+.section{
+  min-height: 100vh;
+}
+img{
+  max-width: 100%;
+}
+
+#bg{
+  z-index:-1;
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height: 100%;
+}
+#bg1{
+  z-index:-1;
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height: 100%;
+}
+
+#bg img{
+  position:absolute;
+  top:40%;
+  left:50%;
+  transform:translate(-50%, -40%);
+  max-width:900px;
+
+}
+
+body {
+  /* color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb)); */
+
+
+    
+    
+}
+
+
+.bannerBgImage{
+  background-image: url("/assets/bannerBg.png");
+  background-size: cover;
+  background-position: center;
+}
+.arrowSVG{
+  transform: rotate(-45deg) translate(64px,40px);
+  top:0;
+  right: 0;
+}
+.arrowSVGText{
+  /* transform:rotate(360deg) translate(64px,40px); */
+  transform: translate(40px,-30px) rotate(-15deg);
+}
+.solarEducationTeacherImage{
+  background-image: url("/assets/personFace.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-text {
+  display: inline-block;
+  animation: marquee 10s linear forwards infinite; /* Adjust the animation duration as needed */
+  transform-origin: 100%;
+  padding-left: 5%; /* Initial offset to start the animation */
+  transition: padding-left 0.5s;
+}
+
+@keyframes marquee{
+  0%{
+    transform: translateX(0%);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}
+
+
+.marquee-text:hover {
+  animation-play-state: paused; /* Pause the animation on hover */
+  padding-left: 100%; /* Stop the text from scrolling */
+}
+
+.contentCardImg{
+  background-image: url("/assets/sun.jpg");
+  background-position: center;
+  background-size: contain;
+}
+
+.featuresBackground{
+  background: linear-gradient(180deg,#dde7f1 61.46%,#f1d4d6 80.21%,#d3c5d6);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* .marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  overflow-x: hidden !important;
+  display: flex !important;
+  flex-direction: row !important;
+  position: relative;
+  width: 100%;
+  transform: none;
+}
+
+
+.marquee-text {
+  flex: 0 0 auto;
+  min-width: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  animation: scroll 29.5875s linear 0s infinite;
+  animation-play-state: running;
+  animation-delay: 0s;
+  animation-direction: normal;
+} */
