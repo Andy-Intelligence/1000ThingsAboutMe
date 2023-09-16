@@ -1,3 +1,4 @@
+"use client"
 import { ReactNode } from "react";
 import FooterSection from "../cards/FooterSection"
 import {BsPhone} from "react-icons/bs"
