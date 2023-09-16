@@ -1,3 +1,4 @@
+"use client"
 import Image from 'next/image'
 import Map from "@/public/Nigeria Map Chart.svg"
 import MapImg from "@/public/assets/Nigeria Map Chart.png"
