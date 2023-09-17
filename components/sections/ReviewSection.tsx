@@ -1,3 +1,4 @@
+"use client"
 import MoreReviews from "../cards/MoreReviews"
 import TitleCounter from "../cards/TitleCounter"
 import React, { useEffect, useRef } from 'react';

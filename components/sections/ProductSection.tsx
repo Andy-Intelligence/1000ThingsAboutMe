@@ -33,9 +33,9 @@ if (!containerRef.current) return
     <div ref = {containerRef} className=" w-[90%] ">
       
 
-      <div className="border border-solid font-bold border-slate-800 rounded-[30px]">
-        <div >
-          <LeadTags text="eGreenConcepts x RisingTown x Give Power"/>
+      <div className="border flex flex-col items-center border-solid font-bold border-slate-800 rounded-[30px]">
+        <div className="w-fit mt-4" >
+          <LeadTags text="eGreenConcepts x Give Power"/>
         </div>
 
         <ContentCard title="WE POWERED A HOUSE IN LAGOS!"

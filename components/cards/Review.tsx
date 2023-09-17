@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import { IoMdAddCircleOutline } from "react-icons/io"
 import { FaStar } from 'react-icons/fa';

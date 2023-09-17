@@ -27,7 +27,7 @@ const BannerSection = () => {
 
     gsap.to(containerRef1.current, {
       scrollTrigger: containerRef1.current, 
-      scale: 1.2, 
+      scale: 1.1, 
       repeat: -1, 
       yoyo: true, 
       ease: "power2"
@@ -64,7 +64,7 @@ const BannerSection = () => {
     <div className="bannerBgImage  flex flex-col min-h-screen w-full space-y-10 items-center rounded-b-[80px] justify-between">
      
       <div className="text-[40px] flex flex-col items-center font-extrabold mb-20 mt-[8rem] text-center ">
-        <p  className="font-custom text-black ">THE FUTURE OF</p>
+        <p  className="font-custom text-white ">THE FUTURE OF</p>
         <div ref={containerRef1} className="font-custom flex items-center"> <svg  width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_473_420)">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M23.4805 36.2348C16.4597 36.2348 10.7261 30.5012 10.7261 23.4805C10.7261 16.4597 16.4597 10.7261 23.4805 10.7261C30.5012 10.7261 36.2348 16.4597 36.2348 23.4805C36.2348 30.5012 30.5012 36.2348 23.4805 36.2348ZM26.6008 7.33275C27.4589 7.33275 28.005 6.39665 27.5369 5.65557L24.4166 0.507025C23.9875 -0.19505 22.9734 -0.19505 22.5054 0.507025L19.385 5.65557C18.917 6.39665 19.463 7.33275 20.3211 7.33275H23.4415H26.6008ZM39.6282 26.6008V23.4805V20.3601C39.6282 19.502 40.5643 18.956 41.3054 19.424L46.4539 22.5444C47.156 22.9734 47.156 23.9875 46.4539 24.4556L41.3054 27.5759C40.6033 28.005 39.6282 27.4589 39.6282 26.6008ZM20.3601 39.6282H23.4805H26.6008C27.4589 39.6282 28.005 40.5643 27.5369 41.3054L24.4166 46.4539C23.9875 47.156 22.9734 47.156 22.5054 46.4539L19.385 41.3054C18.995 40.6033 19.502 39.6282 20.3601 39.6282ZM7.33275 20.3601V23.4805V26.6008C7.33275 27.4589 6.39665 28.005 5.65557 27.5369L0.507025 24.4166C-0.19505 23.9875 -0.19505 22.9734 0.507025 22.5054L5.65557 19.385C6.39665 18.995 7.33275 19.502 7.33275 20.3601ZM36.4298 13.5734C36.9369 14.0805 37.756 13.8464 37.951 13.1444L38.9261 9.12694C39.0821 8.46387 38.4971 7.87881 37.834 8.03483L33.8166 9.00993C33.1535 9.16595 32.9195 10.024 33.3875 10.5311L34.9087 12.0523L36.4298 13.5734ZM33.4265 36.4298L34.9477 34.9087L36.4689 33.3875C36.9759 32.8805 37.795 33.1145 37.99 33.8166L38.9261 37.834C39.0821 38.4971 38.4971 39.0821 37.834 38.9261L33.8166 37.951C33.1535 37.795 32.9195 36.9369 33.4265 36.4298ZM10.5311 33.4265L12.0523 34.9477L13.5734 36.4689C14.0805 36.9759 13.8464 37.795 13.1444 37.99L9.12694 38.9651C8.46387 39.1211 7.87881 38.5361 8.03483 37.873L9.00993 33.8556C9.20495 33.1535 10.063 32.9195 10.5311 33.4265ZM13.5734 10.5311L12.0523 12.0523L10.5311 13.5734C10.024 14.0805 9.20495 13.8464 9.00993 13.1444L8.03483 9.12694C7.87881 8.46387 8.46387 7.87881 9.12694 8.03483L13.1444 9.00993C13.8464 9.20495 14.0805 10.063 13.5734 10.5311Z" fill="#FFC113"/>
@@ -78,7 +78,7 @@ const BannerSection = () => {
 
           <p className="text-yellow-400">ENERGY</p>
         </div>
-        <p className="font-custom text-black">IS BETTER </p>
+        <p className="font-custom text-white">IS BETTER </p>
         {/* ref = {containerRef}  */}
 
       </div>
@@ -91,7 +91,7 @@ const BannerSection = () => {
 
         <div className=" ">
           <Link href={"/solar-packages"}>
-              <button className="bg-yellow-500  whitespace-normal text-base font-custom p-2">See Packges</button>
+              <button className="bg-yellow-500  whitespace-normal text-base text-black font-custom p-2">See Packges</button>
           </Link>
         
         {/* <div>

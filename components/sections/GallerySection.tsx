@@ -1,3 +1,4 @@
+"use client"
 import ContentCard from "../cards/ContentCard"
 import projectImage from "@/public/assets/sun.jpg"
 import TitleCounter from "../cards/TitleCounter"

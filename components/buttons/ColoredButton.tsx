@@ -1,3 +1,4 @@
+"use client"
 import React, {ReactNode} from "react"
 
 
@@ -9,7 +10,7 @@ interface ButtonProps {
 
 const ColoredButton = ({text,icon,onClick}:ButtonProps) => {
   return (
-    <button className="flex items-center space-x-2 bg-blue-500 font-custom1 text-white px-4 py-3 rounded-[40px] hover:bg-blue-600" onClick = {onClick}>
+    <button className="flex border items-center space-x-2 bg-opacity-30 bg-black font-custom1 text-white font-bold px-4 py-3 rounded-[40px] hover:bg-blue-600" onClick = {onClick}>
         <span>{text}</span>
         {icon}
     </button>

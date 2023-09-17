@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import {FaArrowLeft} from "react-icons/fa6"
 import {FaArrowRight} from "react-icons/fa6"
@@ -56,8 +57,8 @@ const TitleCounter = ({text,button,name,stateName,location,rating,stateDescripti
        
 
         {img && 
-            <div className="pt-3">
-            <Image  src={img} className="h-auto" alt="img" width={300} height={80}/>
+            <div className="pt-3 w-full">
+            <Image  src={img} className="h-auto w-full" alt="img" width={300} height={80}/>
             </div>
         }
     </div>
