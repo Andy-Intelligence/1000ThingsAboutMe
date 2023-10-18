@@ -17,6 +17,7 @@ const config: Config = {
       fontFamily:{ 
         custom:['Public Sans, sans-serif'],
         custom1:['Public Sans, sans-serif'],
+        custom2:['Merienda', "cursive"],
       },
 
       colors:{
