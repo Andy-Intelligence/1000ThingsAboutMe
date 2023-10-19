@@ -84,8 +84,12 @@ export async function getBookChapter({bookId}:BookParams){
     path: 'chapters',
     populate: {
       path: 'comments',
+      populate: {
+        path: 'sender',
+      },
+      
     },
-  });
+  })
   const book = JSON.parse(JSON.stringify(res))
   console.log("book chapter",book) 
   return book
