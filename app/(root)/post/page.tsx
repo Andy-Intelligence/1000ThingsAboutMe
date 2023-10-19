@@ -3,7 +3,7 @@
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod'
 import { PostValidation } from '@/validations/post';
-
+import questions from '@/lib/questions';
 import {
   Form,
   FormControl,
@@ -44,6 +44,13 @@ const Write = () => {
   const router = useRouter()
   // const user = useSelector((state:RootState) => state.user);
   // console.log(user)
+  const [randomQuestion, setRandomQuestion] = useState('');
+
+  const getRandomQuestion = () => {
+    const randomIndex = Math.floor(Math.random() * questions.length);
+    const randomQ = questions[randomIndex];
+    setRandomQuestion(randomQ);
+  };
 
 const form = useForm({resolver: zodResolver(PostValidation),
   defaultValues:{
@@ -86,9 +93,15 @@ if(pathName === '/post/edit'){
 
       }
 
-  return (
-    <Form {...form}>
-    <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col justify-start gap-10">
+  return (<div className='flex items-center justify-center flex-col min-h-screen bg-black pt-2'>
+  <div className='flex flex-col items-center justify-center w-[90%]'>
+    <button className='bg-green-500 rounded-lg p-1' onClick={getRandomQuestion}>Generate Question</button>
+    <div className='text-white'>
+      <strong ></strong> {randomQuestion}
+    </div>
+  </div>
+    <Form {...form} >
+    <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col  gap-10 w-[90%] items-center justify-center bg-black">
 
 
 
@@ -97,13 +110,14 @@ if(pathName === '/post/edit'){
         name="chapterHeader"
         render={({ field }) => (
           <FormItem className='flex flex-col gap-3 w-full'>
-            <FormLabel className='text-base text-bold'>
-              Chapter Header
+            <FormLabel className='text-2xl text-bold text-white'>
+              Header
             </FormLabel>
             <FormControl className='flex-1 text-base text-bold text-gray-200'>
               <Input 
                 type = "text"
-                className='account-form_input no-focus text-black'
+                className='account-form_input no-focus text-white bg-black'
+                placeholder="write your chapter header here.."
                 {...field}
               />
             </FormControl>
@@ -120,13 +134,14 @@ if(pathName === '/post/edit'){
         name="text"
         render={({ field }) => (
           <FormItem className='flex flex-col gap-3 w-full'>
-            <FormLabel className='text-base text-bold'>
-              Text
+            <FormLabel className='text-2xl text-bold text-white'>
+              Content
             </FormLabel>
             <FormControl className='flex-1 text-base text-bold text-gray-200'>
               <Textarea 
+              placeholder='write your content here..'
                 rows ={15}
-                className='account-form_input no-focus text-black'
+                className='account-form_input no-focus text-white bg-black'
                 {...field}
               />
             </FormControl>
@@ -136,20 +151,10 @@ if(pathName === '/post/edit'){
       />
 
 
-
-
-
-
-
-
-
-
-
-
-
       <Button type="submit">Post</Button>
     </form>
   </Form>
+  </div>
   )
 }
 

@@ -13,11 +13,12 @@ import { useRouter } from "next/navigation";
 // import { UserState } from '../redux/store'; // Import your RootState type
 import { UserAuth } from '../context/MyContext';
 import { usePathname } from "next/navigation";
+import {AiOutlineLoading3Quarters} from "react-icons/ai"
 
 const Hero = () => {
   const { user, googleSignIn, logOut } = UserAuth() ?? { user: null };
   const pathname = usePathname()
-  const [copySuccess, setCopySuccess] = useState('Click Me to Copy About Me Link And Share');
+  const [copySuccess, setCopySuccess] = useState('Click to Copy Your AboutMe Link And Share');
   const [loading, setLoading] = useState(true);
   const [bookId, setBookId] = useState(""); 
   const fixedPart = `https://1000thingsaboutme.vercel.app/readPosts/content/`
@@ -141,7 +142,7 @@ if(user){
             <div className="logo-icon-text font-Nabla text-2xl">1000 things about me</div>
         </div> 
         <div className="flex flex-row gap-2">
-          <button className="gitHub-btn bg-black text-white rounded-xl p-2" type="button" onClick={()=>{window.open('https://github.com')}}>
+          <button className="gitHub-btn bg-black text-white rounded-xl p-2" type="button" onClick={()=>{window.open('https://github.com/Andy-Intelligence/1000ThingsAboutMe/')}}>
                 Github
           </button>
           {!user ? (<button className="gitHub-btn bg-orange-500 text-white rounded-xl p-2" type="button" onClick={handleSignIn}>
@@ -155,8 +156,9 @@ if(user){
 
       <div >
       {user ? (
-        <div className="font-bold text-yellow-400 text-2xl">
+        <div className="font-bold flex flex-col items-center justify center text-yellow-400 text-2xl">
           <p>Welcome, {user?.displayName}!</p>
+          <p className="text-base text-orange-600">ID :{bookId}</p>
         </div>
       ) : (
         <div className="font-bold text-red-600 text-2xl">
@@ -173,9 +175,7 @@ if(user){
       </h1>
 
       <h2 className="description text-center my-2 text-gray-500">
-        <i>
-        User-generated content drives our product, offering personalized insights into individuals' lives, interests, and perspectives through their written input
-        </i>
+        <i> Personalized platform for sharing and discovering thousands of life stories.</i>
       </h2>
 
       <div className="flex flex-row space-x-3">
@@ -192,10 +192,16 @@ if(user){
 
       <div>
         {loading ? (
-          <div>Loading...</div>
+          
+        <div>
+        <button type="button" className="bg-indigo-500 flex p-1 rounded-[30px] items-center justify-center" disabled>
+          Generating Link...
+          <AiOutlineLoading3Quarters className="animate-spin h-5 w-10 mr-3 text-white"/>
+        </button>
+          </div>
         ) : (
           <div className="flex flex-col items-center justify-center">
-            <button className="bg-gray-100" onClick={handleCopyClick}>{copySuccess}</button>
+            <button className="bg-gray-100 underline text-indigo-500" onClick={handleCopyClick}>{copySuccess}</button>
             {/* <div>{textToCopy}</div> */}
           </div>
         )}

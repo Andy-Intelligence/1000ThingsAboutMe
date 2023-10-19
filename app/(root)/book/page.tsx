@@ -94,8 +94,9 @@ if(pathName === '/book/edit'){
       }
 
   return (
+    <div className='flex items-center justify-center flex-col min-h-screen bg-black'>
     <Form {...form}>
-    <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col justify-start gap-10 ">
+    <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col justify-start gap-10 bg-black">
 
 
 
@@ -104,13 +105,14 @@ if(pathName === '/book/edit'){
         name="name"
         render={({ field }) => (
           <FormItem className='flex flex-col gap-3 w-full'>
-            <FormLabel className='text-base text-bold'>
-              Name
+            <FormLabel className='text-2xl text-bold text-white'>
+              Title
             </FormLabel>
             <FormControl className='flex-1 text-base text-bold text-gray-200'>
               <Input 
+              placeholder='write your book title here..'
                 type = "text"
-                className='account-form_input no-focus text-black'
+                className='account-form_input no-focus text-white bg-black'
                 {...field}
               />
             </FormControl>
@@ -123,13 +125,14 @@ if(pathName === '/book/edit'){
         name="caption"
         render={({ field }) => (
           <FormItem className='flex flex-col gap-3 w-full'>
-            <FormLabel className='text-base text-bold'>
+            <FormLabel className='text-2xl text-bold text-white'>
               Caption
             </FormLabel>
             <FormControl className='flex-1 text-base text-bold text-gray-200'>
               <Input 
+              placeholder='write your book caption here..'
                 type = "text"
-                className='account-form_input no-focus text-black'
+                className='account-form_input no-focus text-white bg-black'
                 {...field}
               />
             </FormControl>
@@ -140,18 +143,6 @@ if(pathName === '/book/edit'){
 
 
 
-
-  
-
-
-
-
-
-
-
-
-
-
 <Button type="submit">Create</Button>
 
       {/* <Link href={'/post'}>
@@ -159,6 +150,7 @@ if(pathName === '/book/edit'){
       </Link> */}
     </form>
   </Form>
+  </div>
   )
         }
 
