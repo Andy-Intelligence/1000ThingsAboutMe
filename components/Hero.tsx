@@ -20,7 +20,7 @@ const Hero = () => {
   const [copySuccess, setCopySuccess] = useState('Click Me to Copy About Me Link And Share');
   const [loading, setLoading] = useState(true);
   const [bookId, setBookId] = useState(""); 
-  const fixedPart = `${pathname}readPosts/content/`
+  const fixedPart = `https://1000thingsaboutme.vercel.app/readPosts/content/`
   const textToCopy = fixedPart + bookId;
   const router = useRouter();
   const redirectToWrite = async () => {
