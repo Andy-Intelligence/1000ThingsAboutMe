@@ -6,9 +6,16 @@ const messageSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  anonymous:{
+    type:Boolean,
+    default:false,
+  },
   sender: {
     type: mongoose.Schema.Types.ObjectId,
+    // type: mongoose.Schema.Types.Mixed,
+    // type: String,
     ref: 'User',
+    // default:"Anonymous",
     required: true,
   },
   receiver: {
